@@ -4,11 +4,12 @@ import Upload from "../Routes/Upload";
 import Home from "../Routes/Home";
 import Auth from "../Routes/Auth";
 import Profile from "../Routes/Profile";
-
+import UserVideoBox from "../Routes/UserVideoBox";
 const LoggedInRoutes = () => (
   <Switch>
     <Route exact path="/" render={() => <Home />} />
     <Route exact path="/upload" render={() => <Upload />} />
+    <Route exact path="/videoBox" render={() => <UserVideoBox />} />
     <Route exact path="/profile" render={() => <Profile />} />
   </Switch>
 );

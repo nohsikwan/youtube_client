@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link, withRouter } from "react-router-dom";
 import useInput from "../Hooks/useInput";
 import { YoutubeIcon } from "./Icon";
-
+import axios from "axios";
 ///////////////////////css/////////////////////
 const Header = styled.header`
   width: 100%;
@@ -34,11 +34,29 @@ const YoutubeContainer = styled.div`
 
 //////////////////////////////////////////
 
-const StudioHeaderComponent = ({ history }) => {
+const StudioHeaderComponent = ({ history, setMyVideoItem }) => {
   const search = useInput("");
-  const onSearchSubmit = (e) => {
+
+  const onSearchSubmit = async (e) => {
     e.preventDefault();
-    //내가 검색한 비디오 제목과 연관 된 것만 보여주기
+    const token = localStorage.getItem("token");
+    const headerOption = {
+      headers: {
+        Authorization: "Bearer " + token,
+      },
+    };
+
+    try {
+      const { data } = await axios.post(
+        `http://localhost:4000/video/search`,
+        { searchItem: search.value },
+        headerOption
+      );
+      setMyVideoItem(data);
+      search.setValue("");
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <Header>

@@ -28,6 +28,7 @@ const Upload = () => {
         `http://localhost:4000/video/`,
         headerOption
       );
+
       setMyVideoItem(video.data);
     } catch (error) {
       console.log(error);
@@ -46,21 +47,21 @@ const Upload = () => {
     <>
       <DropUpload
         setNewCreateVideoItem={setNewCreateVideoItem}
+        setMyVideoItem={setMyVideoItem}
         setLoading={setLoading}
       />
       {loading && <Loading />}
 
       <h1 style={{ marginLeft: "5%" }}> My Upload Video List</h1>
       <Wrap>
-        {myVideoItem.length >= 1 &&
-          myVideoItem.map((video, key) => (
-            <VideoItem
-              key={key}
-              video={video}
-              myVideoItem={myVideoItem}
-              setMyVideoItem={setMyVideoItem}
-            />
-          ))}
+        {myVideoItem.map((video, key) => (
+          <VideoItem
+            key={key}
+            video={video}
+            myVideoItem={myVideoItem}
+            setMyVideoItem={setMyVideoItem}
+          />
+        ))}
       </Wrap>
     </>
   );

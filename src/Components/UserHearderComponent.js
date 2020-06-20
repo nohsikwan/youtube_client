@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link, withRouter } from "react-router-dom";
 import useInput from "../Hooks/useInput";
 import { UsersVideoBox, Plus, User, YoutubeIcon } from "./Icon";
-
+import axios from "axios";
 ///////////////////////css/////////////////////
 const Header = styled.header`
   width: 100%;
@@ -41,10 +41,28 @@ const NoficationContainer = styled.div`
 
 //////////////////////////////////////////
 
-const HeaderComponent = ({ history, setSearchItem }) => {
+const HeaderComponent = ({ history, setVideoItem }) => {
   const search = useInput("");
-  const onSearchSubmit = () => {
-    setSearchItem(search.value);
+  const onSearchSubmit = async (e) => {
+    e.preventDefault();
+    const token = localStorage.getItem("token");
+    const headerOption = {
+      headers: {
+        Authorization: "Bearer " + token,
+      },
+    };
+
+    try {
+      const { data } = await axios.post(
+        `http://localhost:4000/video/allVideoSearch`,
+        { searchItem: search.value },
+        headerOption
+      );
+      setVideoItem(data);
+      search.setValue("");
+    } catch (error) {
+      console.log(error);
+    }
     search.setValue("");
   };
   return (

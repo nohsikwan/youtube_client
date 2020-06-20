@@ -12,7 +12,7 @@ const Wrap = styled.div`
 `;
 const Home = ({ history }) => {
   const [youtubeVideos, setYoutubeVideos] = useState([]);
-  const [searchItem, setSearchItem] = useState("node");
+  const [searchItem, setSearchItem] = useState("nature");
 
   const youtubeVideo = async () => {
     const {

@@ -12,7 +12,7 @@ const VideoNoficationContainer = styled.div`
   top: 1%;
 `;
 
-const DropUpload = ({ setNewCreateVideoItem, setLoading }) => {
+const DropUpload = ({ setNewCreateVideoItem, setLoading, setMyVideoItem }) => {
   const [open, setOpen] = useState(false);
   const [files, setFiles] = useState([]);
   const [newBoard, setNewBoard] = useState(false);
@@ -37,7 +37,7 @@ const DropUpload = ({ setNewCreateVideoItem, setLoading }) => {
   return (
     <>
       {/* header video Icon*/}
-      <StudioHeaderComponent />
+      <StudioHeaderComponent setMyVideoItem={setMyVideoItem} />
       <VideoNoficationContainer>
         <Button onClick={handleOpen}>{<CreateVideo />}</Button>
       </VideoNoficationContainer>

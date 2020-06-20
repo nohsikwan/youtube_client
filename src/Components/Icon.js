@@ -10,14 +10,14 @@ export const HomeIcon = () => (
     <path d="M12 9.185l7 6.514v6.301h-14v-6.301l7-6.514zm0-2.732l-9 8.375v9.172h18v-9.172l-9-8.375zm2 14.547h-4v-6h4v6zm10-8.852l-1.361 1.465-10.639-9.883-10.639 9.868-1.361-1.465 12-11.133 12 11.148z" />
   </svg>
 );
-export const Cards = () => (
+export const UsersVideoBox = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="50"
-    height="50"
+    width="54"
+    height="54"
     viewBox="0 0 24 24"
   >
-    <path d="M18.546 3h-13.069l-5.477 8.986v9.014h24v-9.014l-5.454-8.986zm-11.946 2h10.82l4.249 7h-5.083l-3 3h-3.172l-3-3h-5.08l4.266-7zm-4.6 14v-5h4.586l3 3h4.828l3-3h4.586v5h-20zm3-8l.607-1h12.786l.607 1h-14zm12.787-2h-11.572l.606-1h10.359l.607 1zm-1.215-2h-9.144l.607-1h7.931l.606 1z" />
+    <path d="M0 1v22h24v-22h-24zm4 20h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2v-2h2v2zm14 16h-12v-8h12v8zm0-10h-12v-8h12v8zm4 10h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2v-2h2v2zm0-4h-2v-2h2v2z" />
   </svg>
 );
 

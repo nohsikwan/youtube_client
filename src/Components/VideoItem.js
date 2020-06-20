@@ -18,8 +18,8 @@ const useStyles = makeStyles({
 
 const VideoItem = ({ video, myVideoItem, setMyVideoItem }) => {
   const [open, setOpen] = useState(false);
-  const [stateTitle, setStateTitle] = useState(video.title);
-  const [stateDescription, setStateDescription] = useState(video.description);
+  const [stateTitle, setStateTitle] = useState();
+  const [stateDescription, setStateDescription] = useState();
 
   const classes = useStyles();
   ///////////func////////////
@@ -58,10 +58,11 @@ const VideoItem = ({ video, myVideoItem, setMyVideoItem }) => {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              title:{stateTitle}
+              {stateTitle ? stateTitle : video.title}
             </Typography>
             <Typography variant="h6" color="textSecondary" component="p">
-              description:{stateDescription}
+              description:
+              {stateDescription ? stateDescription : video.description}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
               createdAt:{`${video.createdAt}`.slice(0, 10)}
@@ -91,12 +92,3 @@ const VideoItem = ({ video, myVideoItem, setMyVideoItem }) => {
 };
 
 export default VideoItem;
-
-//-----home------
-//home 에대한 youtube API 발급 받기;;;
-//home 에 영상 뿌려주기;;;
-
-//-----user-------
-//userComponeents 생성해주기
-
-//-----video Like unLike
