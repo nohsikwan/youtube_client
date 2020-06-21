@@ -14,31 +14,26 @@ $ npm(yarn) install
 
 ### 서비스 시연 GIF 모음
 
-- Intro / - Signup1 / - Signup2 / - Signup3
-
+- Intro / - Signup1 / profile
 <div>
-<img width="150" src="./img/main.png" />
-<img width="150" src="./assets/readme/final2.gif" />
-<img width="150" src="./assets/readme/final3.gif" />
-<img width="150" src="./assets/readme/final3.gif" />
+<img width="3000" src="./img/singUp.png" />
+<img width="3000" src="./img/profile.png" />
+
 </div>
 
-- Signup4 / - Signup5 / - Login / - Card Pick
+- Main
 
 <div>
-<img width="150" src="./assets/readme/5.gif" />
-<img width="150" src="./assets/readme/6.gif" />
-<img width="150" src="./assets/readme/ezgif.com-video-to-gif.gif" />
-<img width="150" src="./assets/readme/ezgif.com-video-to-gif_(2).gif" />
+<img width="300" src="./img/main.png" />
+
 </div>
 
-- Chat! / - 112 / - My Profile & Edit / - Logout& withdrawal
+-User Video / Upload
 
 <div>
-<img width="150" src="./assets/readme/Final10.gif" />
-<img width="150" src="./assets/readme/Final11.gif" />
-<img width="150" src="./assets/readme/ezgif.com-video-to-gif_(1).gif" />
-<img width="150" src="./assets/readme/13.gif" />
+<img width="150" src="./img/user video.png" />
+<img width="150" src="./img/upload.png" />
+
 </div>
 
 ### STACK ARCHITECTURE
