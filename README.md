@@ -16,8 +16,8 @@ $ npm(yarn) install
 
 - Intro / - Signup1 / profile
 <div>
-<img width="3000" src="./img/singUp.png" />
-<img width="3000" src="./img/profile.png" />
+<img width="300" src="./img/singUp.png" />
+<img width="300" src="./img/profile.png" />
 
 </div>
 
@@ -31,8 +31,8 @@ $ npm(yarn) install
 -User Video / Upload
 
 <div>
-<img width="150" src="./img/user video.png" />
-<img width="150" src="./img/upload.png" />
+<img width="300" src="./img/user video.png" />
+<img width="300" src="./img/upload.png" />
 
 </div>
 
