@@ -35,3 +35,7 @@ $ npm(yarn) install
 <img width="300" src="./img/upload.png" />
 
 </div>
+
+### 서비스 시연 링크
+
+- https://youtu.be/y29n8KJ1jus
